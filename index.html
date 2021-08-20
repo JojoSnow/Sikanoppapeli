@@ -14,46 +14,49 @@
 
     <section id="main">
         <div id="column1">
-            <div id="rolling">
-                <div id="dice1"></div>
-                <div id="dice2"></div>
+                       
+            <div id="add-players">
+                <form id="add-players-form">
+                    <h1 id="player-form-title">Lisää pelaajat</h1>
+                    <p id="player-form-text">Lisää 2-5 pelaajaa.</p>
+                    <label for="pname" id="player-name-label">Nimi:</label>
+                    <input type="text" name="pname" id="pname">
+                    <input type="submit" value="Lisää" id="player-submit">
+                </form>
 
-                <div id="buttons">
-                    <button id="roll-dice">Heitä nopat</button>
-                    <button id="stop-rolling">Lopeta vuoro</button>    
-                </div>
+                <button id="start-btn">Aloita peli</button>
             </div>
-            
-            <div id="player">
-                <div id="add-players">
-                    <form id="add-players-form">
-                        <h1 id="player-form-title">Lisää pelaajat</h1>
-                        <p id="player-form-text">Lisää 2-5 pelaajaa.</p>
-                        <label for="pname" id="player-name-label">Nimi:</label>
-                        <input type="text" name="pname" id="pname">
-                        <input type="submit" value="Lisää">
-                    </form>
 
-                    <button id="start-btn">Aloita peli!</button>
-                </div>
+            <div id="game">
                 <div id="current-player">
                     <h2 id="player-name"></h2>
+
                     <ul id="player-result-list">
-                        
                     </ul>
-                    <p id="current-player-result"></p>
+
+                    <p id="current-player-result">Tulos: <span id="result"></span></p>
+                </div>
+            
+                <div id="rolling">
+                    <div id="dice">
+                        <div id="dice1"></div>
+                        <div id="dice2"></div>
+                    </div>
+
+                    <div id="btns">
+                        <button id="roll-dice">Heitä nopat</button>
+                        <button id="stop-rolling">Lopeta vuoro</button>    
+                    </div>
                 </div>
             </div>
         </div>
 
         <div id="column2">
             <div id="player-results">
-                <table>
-                    <tr>
+                <table id="player-table">
+                    <tr id="table-headers">
                         <th scope="col">Pelaajat</th>
                         <th scope="col">Tulos</th>
-                    </tr>
-                    <tr id="player-names-result">
                     </tr>
                 </table>
             </div>

@@ -1,0 +1,178 @@
+:root {
+    --light-white: #fafafa;
+    --light-grey: #d1d1d1;
+    --black: #252525;
+    --grey: #a5a5a5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: var(--black);
+}
+
+/*-------MAIN & COLUMNS-------*/
+
+#main {
+    width: 90%;
+    margin: auto;
+    padding-top: 20px;
+    clear: both;
+}
+
+#column1 {
+    width: 60%;
+    float: left;
+}
+
+#column2 {
+    width: 40%;
+    float: left;
+}
+
+/*-------HEADER-------*/
+
+#header {
+    margin: 0;
+    width: 100%;
+    background-color: var(--light-grey);
+    border: 2px solid var(--black);
+}
+
+#header-title {
+    margin: 0;
+    padding: 10px;
+    font-size: 40px;
+}
+
+/*-------BACKGROUND DIVS-------*/
+
+#rolling, #add-players, #current-player {
+    width: 80%;
+    margin: 30px auto;
+    padding: 30px 0;
+    background-color: var(--grey);
+    border: 2px solid var(--light-grey);
+}
+
+/*-------BUTTONS-------*/
+
+#roll-dice, #stop-rolling, #start-btn {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: var(--light-grey);
+    border: 2px solid var(--black);
+    padding: 15px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+/*-------ADD PLAYERS-------*/
+
+#player-form-title {
+    margin: 0;
+    padding: 5px;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+#player-form-text {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+#pname {
+    padding: 4px;
+    background-color: var(--light-white);
+}
+
+#player-submit {
+    font-size: 15px;
+    padding: 3px 10px;
+    margin: 0 5px;
+    background-color: var(--light-grey);
+    cursor: pointer;
+}
+
+/*-------CURRENT PLAYER-------*/
+
+#player-name {
+    font-size: 30px;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+#player-result-list {
+    list-style-type: none;
+    width: 70%;
+    margin: auto;
+    padding: 0;
+    background-color: var(--light-grey);
+    border: 1px solid var(--black);
+}
+
+#player-result-list li {
+    padding: 4px;
+}
+
+#current-player-result {
+    font-size: 20px;
+    font-weight: 600;
+    background-color: var(--light-grey);
+    width: 25%;
+    margin: 20px auto 0 auto;
+    padding: 10px 0;
+    border: 2px solid var(--black);
+}
+
+/*-------DICES-------*/
+
+#dice {
+    margin: auto;
+}
+
+#dice1, #dice2 {
+    display: inline-block;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--light-grey);
+    padding: 9px;
+    margin: 10px auto;
+    border: 1px solid var(--black);
+    border-radius: 20%;
+}
+
+/*-------PLAYER TABLE-------*/
+
+#player-table {
+    width: 90%;
+    text-align: left;
+    margin: 50px auto;
+    border-collapse: collapse;
+}
+
+#player-table th {
+    background-color: var(--grey);
+    padding: 10px;
+    text-transform: uppercase;
+    border: 2px solid var(--black);
+}
+
+#player-table td {
+    text-transform: capitalize;
+    padding: 5px;
+    border: 2px solid var(--black);
+}
+
+#player-table tr:nth-child(odd) {
+    background-color: var(--light-grey);
+}
