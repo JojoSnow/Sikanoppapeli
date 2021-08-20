@@ -5,7 +5,36 @@
     - kaikkien pelaajien tulos taulukko - done
     - pelaajien lisääminen - done
 2. Tee CSS
-    - kaksi kolumnia
+    - kaksi kolumnia - done
     - mikä väriteema?
     - viimeistely
 3. Tee JS
+    - lisää pelaaja nimi taulukkoon ja player-name
+        * annettu nimi taulukkoon
+        * lisää nappula toimimaan
+        * 2-10 pelaajaa
+    - aloita peli -nappi toimimaan
+        * piilota lisää pelaajat div
+        * näytä current-player ja nopat
+    - current-player
+        * nimi oikein näkymään
+        * noppien luvut listaan
+        * vuoron tulos näkyviin
+    - nopat
+        * nopat toimimaan heitä nopat painikkeella
+        * lopeta vuoro painike toimimaan
+            - siirtyy seuraavaan pelaajaan
+            - current-player päivittyy ja lista+tulos nollaantuu
+            - tulos lisääntyy pelajaan koko tulokseen
+
+    - pelaaja taulukko toimimaan
+        * nimi hohtaa kun on hänen vuoronsa
+        * tulos päivittyy vuoron jälkeen
+
+    - tee noppien laskelmat
+        * vuoro loppuu jos kumpi tahansa noppa on 1
+            - ei pisteitä vuorolta
+        * vuoro loppuu jos heittää kolmet tuplat peräkkäin
+            - ei pisteitä vuorolta
+        * tuplilla noppien tulos tuplaantuu
+            - ykkös tuplat = 25 pistettä

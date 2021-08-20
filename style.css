@@ -1,8 +1,9 @@
 :root {
     --light-white: #fafafa;
-    --light-grey: #d1d1d1;
+    --light-purple: #d8c4fd;
+    --purple: #a37de0;
+    --dark-purple: #7d45d6;
     --black: #252525;
-    --grey: #a5a5a5;
 }
 
 * {
@@ -42,7 +43,7 @@ body {
 #header {
     margin: 0;
     width: 100%;
-    background-color: var(--light-grey);
+    background-color: var(--light-purple);
     border: 2px solid var(--black);
 }
 
@@ -58,8 +59,14 @@ body {
     width: 80%;
     margin: 30px auto;
     padding: 30px 0;
-    background-color: var(--grey);
-    border: 2px solid var(--light-grey);
+    background-color: var(--purple);
+    border: 2px solid var(--dark-purple);
+}
+
+#player-results {
+    margin: 30px auto;
+    padding: 5px;
+    background-color: var(--dark-purple);
 }
 
 /*-------BUTTONS-------*/
@@ -68,7 +75,7 @@ body {
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 700;
-    background-color: var(--light-grey);
+    background-color: var(--light-purple);
     border: 2px solid var(--black);
     padding: 15px;
     margin: 20px;
@@ -98,7 +105,8 @@ body {
     font-size: 15px;
     padding: 3px 10px;
     margin: 0 5px;
-    background-color: var(--light-grey);
+    background-color: var(--light-purple);
+    border: 2px solid var(--black);
     cursor: pointer;
 }
 
@@ -115,7 +123,7 @@ body {
     width: 70%;
     margin: auto;
     padding: 0;
-    background-color: var(--light-grey);
+    background-color: var(--light-purple);
     border: 1px solid var(--black);
 }
 
@@ -126,11 +134,11 @@ body {
 #current-player-result {
     font-size: 20px;
     font-weight: 600;
-    background-color: var(--light-grey);
-    width: 25%;
+    background-color: var(--light-purple);
+    width: 30%;
     margin: 20px auto 0 auto;
     padding: 10px 0;
-    border: 2px solid var(--black);
+    border: 1px solid var(--black);
 }
 
 /*-------DICES-------*/
@@ -144,27 +152,41 @@ body {
     font-size: 30px;
     width: 50px;
     height: 50px;
-    background-color: var(--light-grey);
+    background-color: var(--light-purple);
     padding: 9px;
     margin: 10px auto;
     border: 1px solid var(--black);
     border-radius: 20%;
 }
 
-/*-------PLAYER TABLE-------*/
+/*-------TABLES-------*/
 
 #player-table {
     width: 90%;
     text-align: left;
-    margin: 50px auto;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+#player-result-table {
+    width: 80%;
+    text-align: left;
+    margin: auto;
     border-collapse: collapse;
 }
 
 #player-table th {
-    background-color: var(--grey);
+    background-color: var(--purple);
     padding: 10px;
     text-transform: uppercase;
     border: 2px solid var(--black);
+}
+
+#player-result-table th {
+    background-color: var(--light-purple);
+    padding: 5px;
+    text-transform: uppercase;
+    border: 1px solid var(--black);
 }
 
 #player-table td {
@@ -173,6 +195,15 @@ body {
     border: 2px solid var(--black);
 }
 
-#player-table tr:nth-child(odd) {
-    background-color: var(--light-grey);
+#player-result-table td {
+    padding: 4px;
+    border: 1px solid var(--black);
+}
+
+#player-table tr:nth-child(even), #player-result-table tr:nth-child(odd) {
+    background-color: var(--light-purple);
+}
+
+#player-table tr:nth-child(odd), #player-result-table tr:nth-child(even) {
+    background-color: var(--light-white);
 }
