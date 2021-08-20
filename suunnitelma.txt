@@ -1,0 +1,11 @@
+1. Tee HTML
+    - nopat - done
+        * heitto- ja lopetus-painike - done
+    - vaihtuva pelaajasta riippuen heitot ja tulos - done
+    - kaikkien pelaajien tulos taulukko - done
+    - pelaajien lisääminen - done
+2. Tee CSS
+    - kaksi kolumnia
+    - mikä väriteema?
+    - viimeistely
+3. Tee JS
