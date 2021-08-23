@@ -18,7 +18,7 @@
             <div id="add-players">
                 <form id="add-players-form">
                     <h1 id="player-form-title">Lisää pelaajat</h1>
-                    <p id="player-form-text">Lisää 2-10 pelaajaa.</p>
+                    <p id="player-form-text">Lisää vähintään 2 pelaajaa.</p>
                     <label for="pname" id="pname-label">Nimi:</label>
                     <input type="text" name="pname" id="pname">
                     <input type="submit" value="Lisää" id="player-submit">
@@ -30,13 +30,13 @@
             <div id="game">
                 <div id="rolling">
                     <div id="dice">
-                        <div id="dice1"></div>
-                        <div id="dice2"></div>
+                        <div id="dice1">0</div>
+                        <div id="dice2">0</div>
                     </div>
 
                     <div id="btns">
-                        <button id="roll-dice">Heitä nopat</button>
-                        <button id="stop-rolling">Lopeta vuoro</button>    
+                        <button id="roll-btn">Heitä nopat</button>
+                        <button id="end-turn-btn">Lopeta vuoro</button>    
                     </div>
                 </div>
 
@@ -51,7 +51,7 @@
                         </tr>
                     </table>
 
-                    <p id="current-player-result">Tulos: <span id="result">0</span> pistettä</p>
+                    <p id="current-player-result"><span id="result">0</span> pistettä</p>
                 </div>
             </div>
         </div>

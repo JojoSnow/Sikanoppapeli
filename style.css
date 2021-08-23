@@ -71,7 +71,7 @@ body {
 
 /*-------BUTTONS-------*/
 
-#roll-dice, #stop-rolling, #start-btn {
+#roll-btn, #end-turn-btn, #start-btn {
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 700;
