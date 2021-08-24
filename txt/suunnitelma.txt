@@ -17,23 +17,27 @@
         * piilota lisää pelaajat div - done
         * näytä current-player ja nopat - done
     - current-player
-        * nimi oikein näkymään
-        * noppien luvut listaan
-        * vuoron tulos näkyviin
+        * nimi oikein näkymään - done
+        * noppien luvut listaan - done
+        * vuoron tulos näkyviin - done
     - nopat
         * nopat toimimaan heitä nopat painikkeella - done
         * lopeta vuoro painike toimimaan
-            - siirtyy seuraavaan pelaajaan
-            - current-player päivittyy ja lista+tulos nollaantuu
-            - tulos lisääntyy pelajaan koko tulokseen
+            - siirtyy seuraavaan pelaajaan - done
+            - lista ja tulos nollaantuu - done
+            - tulos lisääntyy pelajaan koko tulokseen - done
 
     - pelaaja taulukko toimimaan
-        * tulos päivittyy vuoron jälkeen
+        * tulos päivittyy vuoron jälkeen - done
 
     - tee noppien laskelmat
-        * vuoro loppuu jos kumpi tahansa noppa on 1
+        * vuoro loppuu jos toinen noppa on 1 - done
             - ei pisteitä vuorolta
-        * vuoro loppuu jos heittää kolmet tuplat peräkkäin
+        * vuoro loppuu jos heittää kolmet tuplat peräkkäin - done
             - ei pisteitä vuorolta
-        * tuplilla noppien tulos tuplaantuu
-            - ykkös tuplat = 25 pistettä
+        * tuplilla noppien tulos tuplaantuu - done
+            - ykkös tuplat = 25 pistettä - done
+
+    - peli loppuu kun 100 pistettä tulee täyteen yhdelle pelaajalle - done
+
+    - kun ykköset tulee, napit piilottuu tai jotain
