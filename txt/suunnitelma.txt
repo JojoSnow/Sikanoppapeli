@@ -7,7 +7,6 @@
 2. Tee CSS
     - kaksi kolumnia - done
     - mikä väriteema - done
-    - viimeistely
 3. Tee JS
     - lisää pelaaja nimi taulukkoon
         * annettu nimi taulukkoon - done
@@ -40,4 +39,6 @@
 
     - peli loppuu kun 100 pistettä tulee täyteen yhdelle pelaajalle - done
 
-    - kun ykköset tulee, napit piilottuu tai jotain
+    - kun ykköset tulee "lopeta peli"-nappi piilottuu - done
+
+4. Tee Powerpoint

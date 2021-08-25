@@ -9,7 +9,7 @@ let turnCounter = 0;
 let roundCounter = 1;
 let rowCounter = 0;
 let resultCounter = 0;
-
+let doubleCounter = 0;
 
 const submitBtn = document.getElementById('player-submit');
 const startBtn = document.getElementById('start-btn');
@@ -52,7 +52,6 @@ function startGame() {
     playerCounter = 1;
 }
 
-let i = 0;
 function rollDice() {
     let dice1 = document.getElementById('dice1');
     let dice2 = document.getElementById('dice2');
@@ -64,10 +63,12 @@ function rollDice() {
     dice1.innerText = randomNum1;
     dice2.innerText = randomNum2;
     
+    endTurnBtn.style.display = 'inline-block';
+
     if (randomNum1 === randomNum2) {
-        i++;
+        doubleCounter++;
         turnPoints();
-        if(i === 3) {
+        if(doubleCounter === 3) {
             endTurnNoPoints();
         }
     } else if (randomNum1 === 1 && randomNum2 !== 1 ||
@@ -78,7 +79,7 @@ function rollDice() {
     }
     
     if (randomNum1 !== randomNum2) {
-        i = 0;
+        doubleCounter = 0;
     }
 }
 
@@ -109,9 +110,7 @@ function turnPoints() {
 
 function endTurn() { 
     resultCounter++;
-    if (playerArray.length === 2 && roundCounter === 1) {
-        diceTotalArray.push(diceTotal);
-    } else if (roundCounter === 1) {
+    if (roundCounter === 1) {
         diceTotalArray.push(diceTotal);
     } else {
         diceTotalArray[turnCounter] += diceTotal;
@@ -126,14 +125,14 @@ function endTurn() {
     diceTotal = 0;
     rowCounter = 0;
 
+    endTurnBtn.style.display = 'none';
+
     endGame();
 }
 
 function endTurnNoPoints() {
     resultCounter++;
-    if (playerArray.length === 2 && roundCounter === 1) {
-        diceTotalArray.push(0);
-    } else if (roundCounter === 1) {
+    if (roundCounter === 1) {
         diceTotalArray.push(0);
     } else {
         diceTotalArray[turnCounter] += 0;
@@ -145,6 +144,8 @@ function endTurnNoPoints() {
     nextPlayer();
     cleanResultTable();
 
+    endTurnBtn.style.display = 'none';
+
     diceTotal = 0;
     rowCounter = 0;
 }
@@ -153,6 +154,7 @@ function nextPlayer() {
     let thisPlayer = document.getElementById('player-name-span');
     thisPlayer.innerText = playerArray[playerCounter];
     playerCounter++;
+    doubleCounter = 0;
     
     if (playerCounter > playerArray.length) {
         playerCounter = 0;
@@ -175,11 +177,11 @@ function cleanResultTable() {
 }
 
 function endGame() {
-    for (let x = 0; x < playerArray.length; x++) {
-        if (diceTotalArray[x] >= 100) {
+    for (let i = 0; i < playerArray.length; i++) {
+        if (diceTotalArray[i] >= 100) {
             
-            const winner = playerArray[x];
-            const winnerPoints = diceTotalArray[x];
+            const winner = playerArray[i];
+            const winnerPoints = diceTotalArray[i];
             const winnerText = document.getElementById('winner');
             const winnerPointsText = document.getElementById('winner-points');
             winnerText.innerText = winner;
