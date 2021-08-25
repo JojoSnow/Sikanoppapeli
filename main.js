@@ -25,17 +25,19 @@ endTurnBtn.addEventListener('mouseup', endTurn);
 function addPlayer(e) {
     e.preventDefault();
     let playerName = document.getElementById('pname').value;
-    playerArray.push(playerName);
-    playerCounter++;
+    if (playerName !== '') {
+        playerArray.push(playerName);
+        playerCounter++;
 
-    let playerTable = document.getElementById('player-table');
-    let newRow = playerTable.insertRow(playerCounter);
-    let playerCell = newRow.insertCell(0);
-    let scoreCell = newRow.insertCell(1);
-    scoreCell.setAttribute('id', 'result' + playerCounter);
+        let playerTable = document.getElementById('player-table');
+        let newRow = playerTable.insertRow(playerCounter);
+        let playerCell = newRow.insertCell(0);
+        let scoreCell = newRow.insertCell(1);
+        scoreCell.setAttribute('id', 'result' + playerCounter);
 
-    playerCell.innerText = playerName;
-    scoreCell.innerText = '0'; 
+        playerCell.innerText = playerName;
+        scoreCell.innerText = '0';
+    }
 }
 
 function startGame() {
